@@ -25,9 +25,9 @@ var baloon24 = document.getElementById('baloon24');
 var yay = document.getElementById('no-balls');
 
 function baloonPop(baloonVariable){
-    baloonVariable.addEventListener("mouseover",popbaloon);
+    baloonVariable.addEventListener("mouseover",popBaloon, true);
 
-    function popbaloon(){
+    function popBaloon(){
         if(baloonVariable.style.background=== "none"){
             baloonVariable.innerText = "";
         }
@@ -40,5 +40,48 @@ function baloonPop(baloonVariable){
 
     function popIsOver(){
         baloonVariable.innerText = "";
+    }
+}
+baloonPop(baloon1);
+baloonPop(baloon2);
+baloonPop(baloon3);
+baloonPop(baloon4);
+baloonPop(baloon5);
+baloonPop(baloon6);
+baloonPop(baloon7);
+baloonPop(baloon8);
+baloonPop(baloon9);
+baloonPop(baloon10);
+baloonPop(baloon11);
+baloonPop(baloon12);
+baloonPop(baloon13);
+baloonPop(baloon14);
+baloonPop(baloon15);
+baloonPop(baloon16);
+baloonPop(baloon17);
+baloonPop(baloon18);
+baloonPop(baloon19);
+baloonPop(baloon20);
+baloonPop(baloon21);
+baloonPop(baloon22);
+baloonPop(baloon23);
+baloonPop(baloon24);
+
+document.addEventListener("mouseover",noBaloons,false);
+function noBaloons(){
+    if(baloon1.style.background === "none" && baloon2.style.background === "none" && 
+    baloon3.style.background === "none" && baloon4.style.background === "none" &&
+    baloon5.style.background === "none" && baloon6.style.background === "none" &&
+    baloon7.style.background === "none" && baloon8.style.background === "none" &&
+    baloon9.style.background === "none" && baloon10.style.background === "none" &&
+    baloon11.style.background === "none" && baloon12.style.background === "none" &&
+    baloon13.style.background === "none" && baloon14.style.background === "none" &&
+    baloon15.style.background === "none" && baloon16.style.background === "none" &&
+    baloon17.style.background === "none" && baloon18.style.background === "none" &&
+    baloon19.style.background === "none" && baloon20.style.background === "none" &&
+    baloon21.style.background === "none" && baloon22.style.background === "none" &&
+    baloon23.style.background === "none" && baloon24.style.background === "none"){
+        yay.style.display = "block";
+        window.scrollTo(0,0);
     }
 }
